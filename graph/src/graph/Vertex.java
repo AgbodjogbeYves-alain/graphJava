@@ -41,18 +41,7 @@ public class Vertex {
 		this.relatedEdge.add(e);
 		e.relierSommet(this,v);
 	}
-	
-	/**
-	 * 
-	 * @param e 
-	 * Reliee une arrete a un sommet
-	 */
-	public void relatededge(Edge e){
 		
-		this.relatedEdge.add(e);
-	}
-	
-	
 	/**
 	 * 
 	 * @param num
