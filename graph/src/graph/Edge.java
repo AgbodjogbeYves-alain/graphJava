@@ -33,9 +33,9 @@ public class Edge {
 	public void supprimerRelation()
 	{
 		if (relatedVertex[1] != null){
-		this.relatedVertex[1].relatedEdge.remove(numEdge);
+		this.relatedVertex[1].relatedEdge.remove(relatedVertex[1].foundEdge(numEdge));
 		this.relatedVertex[1].relatedVertex.remove(relatedVertex[2]);
-		this.relatedVertex[2].relatedEdge.remove(numEdge);
+		this.relatedVertex[2].relatedEdge.remove(relatedVertex[1].foundEdge(numEdge));
 		this.relatedVertex[2].relatedVertex.remove(relatedVertex[1]);
 		this.relatedVertex = null;
 		}

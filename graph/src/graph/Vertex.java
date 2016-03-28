@@ -46,6 +46,15 @@ public class Vertex {
 		this.relatedEdge.add(e);
 	}
 	
+	public Edge foundEdge(int num)
+	{
+		Edge x = null;
+		for(Edge e : relatedEdge)
+			if (e.numEdge == num){
+				x = e;
+			}
+		return x;
+		
 	
-	
+	}
 }
