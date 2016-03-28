@@ -6,11 +6,20 @@ public class Edge {
 	int numEdge;
 	Vertex[] relatedVertex = new Vertex[2];
 	
+	/**
+	 * 
+	 * @param num
+	 */
 	public Edge(int num){
 		numEdge = num;
 		relatedVertex = null;
 	}
 	
+	/**
+	 * 
+	 * @param v
+	 * @param x
+	 */
 	public void relierSommet(Vertex v,Vertex x)
 	{
 		if (relatedVertex[0]== null || relatedVertex[1] == null){
@@ -19,17 +28,28 @@ public class Edge {
 		}
 		else System.out.println("Cette arrete est deja lié a 2");
 	}
-
+	
+	/**
+	 * 
+	 * @return
+	 */
 	public int getEdge()
 	{
 		return this.numEdge;
 	}
 	
+	/**
+	 * 
+	 * @param num
+	 */
 	public void setEdge(int num)
 	{
 		this.numEdge = num;
 	}
 	
+	/**
+	 * 
+	 */
 	public void supprimerRelation()
 	{
 		if (relatedVertex[1] != null){

@@ -33,7 +33,13 @@ public class Vertex {
 	 */
 	public void relatevertex(Vertex v)
 	{
+		int num=0;
+		while(this.relatedEdge.get(num) != null){num++;}
+		Edge e = new Edge(num);
 		this.relatedVertex.add(v);
+		v.relatedVertex.add(this);
+		this.relatedEdge.add(e);
+		e.relierSommet(this,v);
 	}
 	
 	/**
@@ -46,6 +52,12 @@ public class Vertex {
 		this.relatedEdge.add(e);
 	}
 	
+	
+	/**
+	 * 
+	 * @param num
+	 * @return
+	 */
 	public Edge foundEdge(int num)
 	{
 		Edge x = null;
