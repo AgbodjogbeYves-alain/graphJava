@@ -2,7 +2,7 @@ package graph;
 
 /**
  * 
- * @author Othniel Agbodjogbe & Godefroi Roussel
+ * @author Othniel Agbodjogbe  Godefroi Roussel
  *
  */
 public class DirectedEdge extends Edge {
@@ -48,7 +48,7 @@ public class DirectedEdge extends Edge {
 	
 	/**
 	 * Procedure de modification de Vertex d'arrivee
-	 * @param newFin
+	 * @param newFin 
 	 */
 	public void setFin(Vertex newFin){
 		this.debut = newFin;

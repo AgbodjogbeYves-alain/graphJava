@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 /**
  * Classe representante un sommet du graphe
- * @author Yves-alain Agbodjogbe & Godefroi Roussel
+ * @author Yves-alain Agbodjogbe  Godefroi Roussel
  *
  */
 

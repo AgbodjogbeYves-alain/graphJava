@@ -1,6 +1,10 @@
 package graph;
 /* Classe representante une arrete du graphe*/
-
+/**
+ * 
+ * @author Othniel Agbodjogbe Godefroi Roussel
+ *
+ */
 public class Edge {
 	
 	Object numEdge;

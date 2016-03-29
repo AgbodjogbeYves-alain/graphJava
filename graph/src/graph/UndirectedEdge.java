@@ -2,7 +2,7 @@ package graph;
 
 /**
  * 
- * @author Othniel Agbodjogbe & Godefroi Roussel
+ * @author Othniel Agbodjogbe  Godefroi Roussel
  *
  */
 public class UndirectedEdge extends Edge {
