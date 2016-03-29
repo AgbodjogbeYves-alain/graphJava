@@ -71,34 +71,20 @@ public class Vertex {
 	/**
 	 * Relié un autre vertex a celui ci 
 	 * @param v le vertex a lier
-	 * 
+	 * Modifie la liste des Vertex qui sont liés a celui ci
 	 */
 	public void relatevertex(Vertex v)
 	{
-		int num=0;
-		while(this.relatedEdge.get(num) != null){num++;}
-		Edge e = new Edge(num);
-		this.relatedVertex.add(v);
-		v.relatedVertex.add(this);
-		this.relatedEdge.add(e);
-		e.relierSommet(this,v);
+		
 	}
 		
 	/**
 	 * Trouver un Edge relié a ce vertex
 	 * @param numEdge identifiant du Edge
-	 * @return le Edge identifié par num
 	 */
-	public Edge foundEdge(Object numEdge)
+	public void foundEdge(Object numEdge)
 	{
-		Edge x = null;
-		for(Edge e : relatedEdge)
-			if (e.numEdge == numEdge){
-				x = e;
-			}
-		return x;
-		
-	
+
 	}
 	
 	/**

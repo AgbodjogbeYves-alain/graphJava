@@ -48,14 +48,14 @@ public interface Graph {
 	 * Procedure de suppression d'un Edge en connaissant son identificateur
 	 * @param numEdge Object
 	 */
-	public void supprimerliaison(Object numEdge);
+	public void supprimerRelation(Object numEdge);
 	
 	/**
 	 * Procedure de suppression d'un Edge en connaissant les 2 vertex liés
 	 * @param v Vertex
 	 * @param x Vertex
 	 */
-	public void supprimerliaison1(Vertex v,Vertex x);
+	public void supprimerRelation(Vertex v,Vertex x);
 	
 	/**
 	 * Renvoi le nombre de Vertex du Graph
@@ -67,7 +67,20 @@ public interface Graph {
 	 * Suppression de liaison
 	 * @param e Edge
 	 */
-	void supprimerliaison(Edge e);
+	void supprimerRelation(Edge e);
+	
+	/**
+	 * Trouver un Edge relié a ce vertex
+	 * @param numEdge identifiant du Edge
+	 */
+	public void foundEdge(Object numEdge);
+	
+	/**
+	 * Relié un autre vertex a celui ci 
+	 * @param v le vertex a lier
+	 * Modifie la liste des Vertex qui sont liés a celui ci
+	 */
+	public void relatevertex(Vertex v);
 	
 	
 
