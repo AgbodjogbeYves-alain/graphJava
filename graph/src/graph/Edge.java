@@ -11,7 +11,7 @@ public class Edge {
 	Vertex[] relatedVertex = new Vertex[2];
 	 Graph g;
 	/**
-	 * Constructeur d'un edge
+	 * Constructeur d un edge
 	 * @param num identificateur du Edge
 	 */
 	public Edge(int num){
@@ -20,9 +20,9 @@ public class Edge {
 	}
 	
 	/**
-	 * Constructeur d'un Edge
-	 * @param v L'un des vertex que lie le Edge
-	 * @param x L'un des vertex que lie le Edge
+	 * Constructeur d un Edge
+	 * @param v L un des vertex que lie le Edge
+	 * @param x L un des vertex que lie le Edge
 	 * @param g Le graphe auquel appartient le Edge
 	 */
 	public Edge(Vertex v,Vertex x,Graph g)
@@ -33,7 +33,7 @@ public class Edge {
 	}
 	
 	/**
-	 * Constructeur d'un Edge
+	 * Constructeur d un Edge
 	 * @param num identificateur du Edge
 	 * @param g Le graphe auquel appartient le Edge
 	 */
@@ -55,7 +55,7 @@ public class Edge {
 	}
 	
 	/**
-	 * Renvoi l'identifiant du Edge si il en a un
+	 * Renvoi l identifiant du Edge si il en a un
 	 * @return numEdge identifiant du Edge
 	 */
 	public Object getEdge()
@@ -64,7 +64,7 @@ public class Edge {
 	}
 	
 	/**
-	 * Modifie l'identifiant du Edge
+	 * Modifie l identifiant du Edge
 	 * @param num nouvel identifiant du Edge
 	 */
 	public void setEdge(Object num)
@@ -74,10 +74,10 @@ public class Edge {
 	
 	/**
 	 * Procedure de suppression de Edge
-	 * Si le Edge est relié a au moins un Vertex supprime la relation entre le Edge et le 
+	 * Si le Edge est relie a au moins un Vertex supprime la relation entre le Edge et le 
 	 * Vertex
 	 * Sinon renvoi une erreur
-	 * Propage la suppression aux Vertex concernés
+	 * Propage la suppression aux Vertex concernes
 	 */
 	public void supprimerRelation()
 	{

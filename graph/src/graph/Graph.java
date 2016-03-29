@@ -27,31 +27,31 @@ public interface Graph {
 	void addVertex(Vertex v);
 	
 	/**
-	 * Ajout d'un Vertex
+	 * Ajout d un Vertex
 	 * @param v Vertex a ajouter
 	 */
 	public void ajouterSommet(Vertex v);
 	
 	/**
-	 * Suppression d'un Vertex
+	 * Suppression d un Vertex
 	 * @param v Vertex a supprimer
 	 */
 	public void supprimerSommet(Vertex v);
 	
 	/**
-	 * Suppression d'un Vertex en connaissant son identificateur 
+	 * Suppression d un Vertex en connaissant son identificateur 
 	 * @param numVertex Object
 	 */
 	public void supprimerSommet(Object numVertex);
 	
 	/**
-	 * Procedure de suppression d'un Edge en connaissant son identificateur
+	 * Procedure de suppression d un Edge en connaissant son identificateur
 	 * @param numEdge Object
 	 */
 	public void supprimerRelation(Object numEdge);
 	
 	/**
-	 * Procedure de suppression d'un Edge en connaissant les 2 vertex liés
+	 * Procedure de suppression d un Edge en connaissant les 2 vertex lies
 	 * @param v Vertex
 	 * @param x Vertex
 	 */
@@ -70,15 +70,15 @@ public interface Graph {
 	void supprimerRelation(Edge e);
 	
 	/**
-	 * Trouver un Edge relié a ce vertex
+	 * Trouver un Edge relie a ce vertex
 	 * @param numEdge identifiant du Edge
 	 */
 	public void foundEdge(Object numEdge);
 	
 	/**
-	 * Relié un autre vertex a celui ci 
+	 * Relie un autre vertex a celui ci 
 	 * @param v le vertex a lier
-	 * Modifie la liste des Vertex qui sont liés a celui ci
+	 * Modifie la liste des Vertex qui sont lies a celui ci
 	 */
 	public void relatevertex(Vertex v);
 	

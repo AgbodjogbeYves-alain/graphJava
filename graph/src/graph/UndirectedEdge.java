@@ -19,7 +19,7 @@ public class UndirectedEdge extends Edge {
 	}
 	
 	/**
-	 * Fonction de recuperation d'un des vertex
+	 * Fonction de recuperation d un des vertex
 	 * @return vertex
 	 */
 	public Vertex getv(){
@@ -27,7 +27,7 @@ public class UndirectedEdge extends Edge {
 	}
 	
 	/**
-	 * Procedure de modification d'un des vertex
+	 * Procedure de modification d un des vertex
 	 * @param newv Vertex
 	 */
 	public void setv(Vertex newv){
@@ -35,7 +35,7 @@ public class UndirectedEdge extends Edge {
 	}
 	
 	/**
-	 * Fonction de recuperation d'un des vertex
+	 * Fonction de recuperation d un des vertex
 	 * @return Vertex
 	 */
 	public Vertex getx(){
@@ -43,7 +43,7 @@ public class UndirectedEdge extends Edge {
 	}
 	
 	/**
-	 * Procedure de modification d'un des vertex
+	 * Procedure de modification d un des vertex
 	 * @param newx Vertex
 	 */
 	public void setx(Vertex newx){

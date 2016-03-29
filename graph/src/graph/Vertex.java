@@ -54,14 +54,14 @@ public class Vertex {
 	
 	
 	/**
-	 * Recuperer l'identifiant du sommet s'il en a un
-	 * @return l'identifiant du vertex
+	 * Recuperer l identifiant du sommet s il en a un
+	 * @return l identifiant du vertex
 	 */
 	public Object getNumVertex() {
 		return numVertex;
 	}
 	/**
-	 *Modifier l'identifiant du sommet 
+	 *Modifier l identifiant du sommet 
 	 * @param numVertex nouvel identifiant du vertex
 	 */
 	public void setNumVertex(int numVertex) {
@@ -69,9 +69,9 @@ public class Vertex {
 	}
 	
 	/**
-	 * Relié un autre vertex a celui ci 
+	 * Relier un autre vertex a celui ci 
 	 * @param v le vertex a lier
-	 * Modifie la liste des Vertex qui sont liés a celui ci
+	 * Modifie la liste des Vertex qui sont lies a celui ci
 	 */
 	public void relatevertex(Vertex v)
 	{
@@ -79,7 +79,7 @@ public class Vertex {
 	}
 		
 	/**
-	 * Trouver un Edge relié a ce vertex
+	 * Trouver un Edge relie a ce vertex
 	 * @param numEdge identifiant du Edge
 	 */
 	public void foundEdge(Object numEdge)
@@ -88,14 +88,14 @@ public class Vertex {
 	}
 	
 	/**
-	 * Recuperer le graphe lié a ce Vertex
+	 * Recuperer le graphe lie a ce Vertex
 	 * @return graphe
 	 */
 	public Graph getGraph()
 	{return this.g;}
 	
 	/**
-	 * Changer le graphe lié a ce vertex
+	 * Changer le graphe lie a ce vertex
 	 * @param g nouveau graphe
 	 */
 	public void setGraph(Graph g){

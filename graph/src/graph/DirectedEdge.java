@@ -13,7 +13,7 @@ public class DirectedEdge extends Edge {
 	/**
 	 * Constructeur DirectedEdge
 	 * @param debut Vertex de depart
-	 * @param fin Vextex d'arrivee
+	 * @param fin Vextex d arrivee
 	 * @param g graphe auquel appartient le Edge
 	 */
 	public DirectedEdge(Vertex debut, Vertex fin,Graph g)
@@ -23,7 +23,7 @@ public class DirectedEdge extends Edge {
 	}
 	
 	/**
-	 * Fonction de recuperation de vertex de départ
+	 * Fonction de recuperation de vertex de depart
 	 * @return Vertex
 	 */
 	public Vertex getdebut(){
@@ -39,7 +39,7 @@ public class DirectedEdge extends Edge {
 	}
 	
 	/**
-	 *Fonction de recuperation de vertex d'arrivee 
+	 *Fonction de recuperation de vertex d arrivee 
 	 * @return Vertex
 	 */
 	public Vertex getfin(){
@@ -47,7 +47,7 @@ public class DirectedEdge extends Edge {
 	}
 	
 	/**
-	 * Procedure de modification de Vertex d'arrivee
+	 * Procedure de modification de Vertex d arrivee
 	 * @param newFin 
 	 */
 	public void setFin(Vertex newFin){
