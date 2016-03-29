@@ -86,14 +86,14 @@ public class Vertex {
 		
 	/**
 	 * Trouver un Edge relié a ce vertex
-	 * @param num identifiant du Edge
+	 * @param numEdge identifiant du Edge
 	 * @return le Edge identifié par num
 	 */
-	public Edge foundEdge(int num)
+	public Edge foundEdge(Object numEdge)
 	{
 		Edge x = null;
 		for(Edge e : relatedEdge)
-			if (e.numEdge == num){
+			if (e.numEdge == numEdge){
 				x = e;
 			}
 		return x;
