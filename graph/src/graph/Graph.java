@@ -27,60 +27,69 @@ public interface Graph {
 	void addVertex(Vertex v);
 	
 	/**
-	 * Ajout d un Vertex
-	 * @param v Vertex a ajouter
-	 */
-	public void ajouterSommet(Vertex v);
-	
-	/**
 	 * Suppression d un Vertex
 	 * @param v Vertex a supprimer
+	 * Propage la suppression aux autres vertex et aux relations
 	 */
-	public void supprimerSommet(Vertex v);
+	public void suppressVertex1(Vertex v);
 	
 	/**
 	 * Suppression d un Vertex en connaissant son identificateur 
 	 * @param numVertex Object
 	 */
-	public void supprimerSommet(Object numVertex);
+	public void suppressVertex2(Object numVertex);
 	
 	/**
 	 * Procedure de suppression d un Edge en connaissant son identificateur
 	 * @param numEdge Object
+	 * Propage la suppression de relation aux vertex
 	 */
-	public void supprimerRelation(Object numEdge);
+	public void suppressRelation1(Object numEdge);
 	
 	/**
 	 * Procedure de suppression d un Edge en connaissant les 2 vertex lies
 	 * @param v Vertex
 	 * @param x Vertex
 	 */
-	public void supprimerRelation(Vertex v,Vertex x);
+	public void suppressRelation2(Vertex v,Vertex x);
+	
+	
+	
+	/**
+	 * Suppression de relation en connaissant le Edge
+	 * @param e Edge
+	 */
+	void suppressRelation3(Edge e);
 	
 	/**
 	 * Renvoi le nombre de Vertex du Graph
 	 * @return int 
 	 */
 	int cardGraph();
-
+	
+	
 	/**
-	 * Suppression de liaison
+	 * Renvoi les vertex relies par le Edge passé en parametre
 	 * @param e Edge
+	 * @return Vertex
 	 */
-	void supprimerRelation(Edge e);
+	public Vertex[] foundVertex(Edge e);
 	
 	/**
-	 * Trouver un Edge relie a ce vertex
-	 * @param numEdge identifiant du Edge
+	 * Retrouver le Edge qui lie les 2 vertex passés en parametre
+	 * @param x Vertex
+	 * @param v Vertex
+	 * @return Edge
 	 */
-	public void foundEdge(Object numEdge);
+	public Edge foundEdge(Vertex x, Vertex v);
+	
 	
 	/**
-	 * Relie un autre vertex a celui ci 
-	 * @param v le vertex a lier
-	 * Modifie la liste des Vertex qui sont lies a celui ci
+	 * Relie 2 vertex ensemble dans le graphe
+	 * @param x Vertex
+	 * @param v Vertex
 	 */
-	public void relatevertex(Vertex v);
+	public void relatevertex(Vertex x,Vertex v);
 	
 	
 
