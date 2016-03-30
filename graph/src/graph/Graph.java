@@ -84,7 +84,7 @@ public interface Graph {
 	public Edge foundEdge(Vertex x, Vertex v);
 	
 	
-	//**
+	/**
 	 * Relie 2 vertex ensemble dans le graphe
 	 * @param x Vertex
 	 * @param v Vertex
