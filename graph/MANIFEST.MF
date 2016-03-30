@@ -1,4 +1,5 @@
 Manifest-Version: 1.0
+Class-Path: bin
 Created-By: 1.7.0_95 (Oracle Corporation)
 Main-Class: graph.TestGraph
 
