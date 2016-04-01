@@ -75,16 +75,28 @@ public class Vertex {
 	 */
 	public void relatevertex(Vertex v)
 	{
-		
+		int num=0;
+		while(this.relatedEdge.get(num) != null){num++;}
+		Edge e = new Edge(num);
+		this.relatedVertex.add(v);
+		v.relatedVertex.add(this);
+		this.relatedEdge.add(e);
+		e.relierSommet(this,v);
 	}
 		
 	/**
 	 * Trouver un Edge relie a ce vertex
 	 * @param numEdge identifiant du Edge
+	 * @return 
 	 */
-	public void foundEdge(Object numEdge)
+	public Object foundEdge(Object numEdge)
 	{
-
+		Edge x = null;
+		for(Edge e : relatedEdge)
+			if (e.numEdge == numEdge){
+				x = e;
+			}
+		return x;
 	}
 	
 	/**
