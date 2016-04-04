@@ -9,8 +9,10 @@ public interface Graph {
 	
 	
 	/**
-	* Ajouter un directedEdge dans le graph
-	*/
+	 * Rajoute un DirectedEdge dans le Graphe
+	 * @param debut Vertex
+	 * @param fin Vertex
+	 */
 	void addEdgeDirected(Vertex debut, Vertex fin);
 
 	/**
