@@ -68,6 +68,22 @@ public class Edge {
 	}
 	
 	/**
+	 * Renvoi le vertex dont part la liaison
+	 * @return Vertex
+	 */
+	public Vertex getFirstVertex(){
+		return this.relatedVertex[1];
+	}
+	
+	/**
+	 * Renvoi le vertex ou arrive la liaison
+	 * @return Vertex
+	 */
+	public Vertex getSecondVertex(){
+		return this.relatedVertex[2];
+	}
+	
+	/**
 	 * Modifie l identifiant du Edge
 	 * @param num nouvel identifiant du Edge
 	 */
