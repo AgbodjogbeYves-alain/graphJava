@@ -31,27 +31,27 @@ public interface Graph {
 	 * @param v Vertex a supprimer
 	 * Propage la suppression aux autres vertex et aux relations
 	 */
-	public void suppressVertex1(Vertex v);
+	public void suppressVertex(Vertex v);
 	
 	/**
 	 * Suppression d un Vertex en connaissant son identificateur 
 	 * @param numVertex Object
 	 */
-	public void suppressVertex2(Object numVertex);
+	public void suppressVertex(Object numVertex);
 	
 	/**
 	 * Procedure de suppression d un Edge en connaissant son identificateur
 	 * @param numEdge Object
 	 * Propage la suppression de relation aux vertex
 	 */
-	public void suppressRelation1(Object numEdge);
+	public void suppressRelation(Object numEdge);
 	
 	/**
 	 * Procedure de suppression d un Edge en connaissant les 2 vertex lies
 	 * @param v Vertex
 	 * @param x Vertex
 	 */
-	public void suppressRelation2(Vertex v,Vertex x);
+	public void suppressRelation(Vertex v,Vertex x);
 	
 	
 	
@@ -59,7 +59,7 @@ public interface Graph {
 	 * Suppression de relation en connaissant le Edge
 	 * @param e Edge
 	 */
-	void suppressRelation3(Edge e);
+	void suppressRelation(Edge e);
 	
 	/**
 	 * Renvoi le nombre de Vertex du Graph
