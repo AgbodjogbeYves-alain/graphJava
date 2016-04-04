@@ -2,21 +2,19 @@ import bin.Graphe;
 
 public class graphImplementation implements Graphe {
 
-	Vertex[][] tabvertex = new Vertex[10][10];
-	Edge[][] tabEdge = new Edge[10][10];
+	Vertex[] tabvertex = new Vertex[100];
+	Edge[] tabEdge = new Edge[100];
 	
 	@Override
 	public void addEdge(Vertex arg0, Vertex arg1) { //J'estime qu'il s'agit d'un ajout de UndirectedEdge
 		UndirectedEdge e = new UndirectedEdge(null, arg0, arg1);
 		int i = 0;
-		int y = 0;
 		boolean insere = false;
-		for (i=0;i<10;i++){
-			for (y=0;y<10;y++){
-				if (this.tabEdge[i][y] == null){
-					this.tabEdge[i][y]= e;
+			for (i=0;i<100;i++){
+				if (this.tabEdge[i] == null){
+					this.tabEdge[i]= e;
 					insere = true;
-				}
+				
 			}
 		}
 		if (insere  == true){
@@ -34,16 +32,15 @@ public class graphImplementation implements Graphe {
 	@Override
 	public void addVertex(Vertex arg0) {
 		int i = 0;
-		int y = 0;
 		boolean insere = false;
-		for (i=0;i<10;i++){
-			for (y=0;y<10;y++){
-				if (this.tabvertex[i][y] == null){
-					this.tabvertex[i][y]= arg0;
+		for (i=0;i<100;i++){
+			
+				if (this.tabvertex[i] == null){
+					this.tabvertex[i]= arg0;
 					insere = true;
 				}
 		
-			}
+		
 			
 		}
 		if (insere  == false){
@@ -65,14 +62,13 @@ public class graphImplementation implements Graphe {
 		int x;
 		int y;
 		for (x=0;x<10;x++){
-			for(y=0;y<10;y++){
-				if (tabEdge[x][y].getName()== arg0)
-				{
-					tabEdge[x][y].getVertex().getFirst().removeNeighbour(tabEdge[x][y].getVertex().getSecond());//(getName));
-					tabEdge[x][y].getVertex().getSecond().removeNeighbour(tabEdge[x][y].getVertex().getFirst());//(getName));
-					tabEdge[x][y] = null;
+			if (tabEdge[x].getName()== arg0)
+			{
+					tabEdge[x].getVertex().getFirst().removeNeighbour(tabEdge[x].getVertex().getSecond());//(getName));
+					tabEdge[x].getVertex().getSecond().removeNeighbour(tabEdge[x].getVertex().getFirst());//(getName));
+					tabEdge[x] = null;
 				}
-			}
+			
 			
 		}
 		
