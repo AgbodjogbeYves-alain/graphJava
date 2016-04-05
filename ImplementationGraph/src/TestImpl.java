@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class TestImpl {
-	public static void main() {
+	public static void main(String[] args) {
 		graphImplementation g = new graphImplementation();
 		int j = 0;
 		Vertex[] tabvertex = new Vertex[100];
