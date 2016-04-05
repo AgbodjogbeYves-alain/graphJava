@@ -72,7 +72,7 @@ public class Edge {
 	 * @return Vertex
 	 */
 	public Vertex getFirstVertex(){
-		return this.relatedVertex[1];
+		return this.relatedVertex[0];
 	}
 	
 	/**
@@ -80,7 +80,7 @@ public class Edge {
 	 * @return Vertex
 	 */
 	public Vertex getSecondVertex(){
-		return this.relatedVertex[2];
+		return this.relatedVertex[1];
 	}
 	
 	/**
@@ -101,11 +101,11 @@ public class Edge {
 	 */
 	public void supprimerRelation()
 	{
-		if (relatedVertex[1] != null){
-		this.relatedVertex[1].relatedEdge.remove(relatedVertex[1].foundEdge(numEdge));
-		this.relatedVertex[1].relatedVertex.remove(relatedVertex[2]);
-		this.relatedVertex[2].relatedEdge.remove(relatedVertex[1].foundEdge(numEdge));
-		this.relatedVertex[2].relatedVertex.remove(relatedVertex[1]);
+		if (relatedVertex[0] != null){
+		this.relatedVertex[0].relatedEdge.remove(relatedVertex[0].foundEdge(numEdge));
+		this.relatedVertex[0].relatedVertex.remove(relatedVertex[1]);
+		this.relatedVertex[1].relatedEdge.remove(relatedVertex[0].foundEdge(numEdge));
+		this.relatedVertex[1].relatedVertex.remove(relatedVertex[0]);
 		this.relatedVertex = null;
 		}
 		else {this.relatedVertex = null;}
