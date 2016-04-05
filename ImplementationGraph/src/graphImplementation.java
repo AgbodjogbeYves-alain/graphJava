@@ -23,12 +23,13 @@ public class graphImplementation implements Graphe {
 		UndirectedEdge e = new UndirectedEdge(null, arg0, arg1);
 		int i = 0;
 		boolean insere = false;
-			for (i=0;i<100;i++){
+		while(i<tabvertex.length && insere==false){
 				if (this.tabEdge[i] == null){
 					this.tabEdge[i]= e;
 					insere = true;
 				
 			}
+			i++;
 		}
 		if (insere  == true){
 			arg0.addNeighbour(arg1);

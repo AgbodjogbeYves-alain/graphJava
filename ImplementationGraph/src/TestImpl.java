@@ -49,7 +49,7 @@ public class TestImpl {
 				}
 				n++;
 			}
-			g.addEdge(tabvertex1[m],tabvertex1[n]);
+			g.addEdge(tabvertex1[m-1],tabvertex1[n-1]);
 			System.out.println("Voulez vous liez 2 autres vertex? entrez 1");
 			sc6 = new Scanner(System.in);
 			a = sc6.nextInt();
