@@ -7,8 +7,16 @@ public class graphImplementation implements Graphe {
 	
 	
 	public graphImplementation(){
-		tabvertex = null;
-		tabEdge = null;
+		int i=0;
+		for (i=0;i<this.tabvertex.length;i++)
+		{
+			this.tabvertex[i] = null;
+		}
+		
+		for (i=0;i<this.tabvertex.length;i++)
+		{
+			this.tabEdge[i] = null;
+		}
 	}
 	@Override
 	public void addEdge(Vertex arg0, Vertex arg1) { //J'estime qu'il s'agit d'un ajout de UndirectedEdge
@@ -33,20 +41,17 @@ public class graphImplementation implements Graphe {
 		
 		
 	}
-
+	
 	@Override
 	public void addVertex(Vertex arg0) {
 		int i = 0;
 		boolean insere = false;
-		for (i=0;i<100;i++){
-			
-				if (this.tabvertex[i] == null){
-					this.tabvertex[i]= arg0;
-					insere = true;
-				}
-		
-		
-			
+		while(i<tabvertex.length && insere==false){	
+			if (this.tabvertex[i] == null){
+				System.out.println("Fait");
+				this.tabvertex[i]= arg0;
+				insere = true;
+			}	
 		}
 		if (insere  == false){
 			System.out.println("Tableau de vertex plein" );
@@ -55,7 +60,7 @@ public class graphImplementation implements Graphe {
 
 	@Override
 	public boolean isEmpty() {
-		if(this.tabvertex == null && this.tabEdge ==null){
+		if(this.tabvertex == null && this.tabEdge == null){
 			return true;
 		}
 		else {return false;}
