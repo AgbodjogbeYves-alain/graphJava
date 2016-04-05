@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class Vertex {
 	
-	private Object numVertex;
+	private int numVertex;
 	ArrayList<Vertex> relatedVertex = new ArrayList<Vertex>();
 	ArrayList<Edge> relatedEdge = new ArrayList<Edge>();
 	Graph g;
@@ -44,10 +44,11 @@ public class Vertex {
 	 * Constructeur du Vertex
 	 * @param g Graphe auquel le Vertex appartient
 	 */
+	@SuppressWarnings("null")
 	public Vertex(Graph g)
 	{
 		this.g = g;
-		numVertex = null;
+		numVertex = (Integer) null;
 		relatedVertex = null;
 		relatedEdge = null;
 	}
@@ -57,8 +58,8 @@ public class Vertex {
 	 * Recuperer l identifiant du sommet s il en a un
 	 * @return l identifiant du vertex
 	 */
-	public Object getNumVertex() {
-		return numVertex;
+	public int getNumVertex() {
+		return this.numVertex;
 	}
 	/**
 	 *Modifier l identifiant du sommet 
@@ -89,14 +90,14 @@ public class Vertex {
 	 * @param numEdge identifiant du Edge
 	 * @return 
 	 */
-	public Object foundEdge(Object numEdge)
+	public int foundEdge(int numEdge)
 	{
 		Edge x = null;
 		for(Edge e : relatedEdge)
 			if (e.numEdge == numEdge){
 				x = e;
 			}
-		return x;
+		return x.numEdge;
 	}
 	
 	/**

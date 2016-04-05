@@ -7,9 +7,9 @@ package graph;
  */
 public class Edge {
 	
-	Object numEdge;
+	int numEdge;
 	Vertex[] relatedVertex = new Vertex[2];
-	 Graph g;
+	Graph g;
 	/**
 	 * Constructeur d un edge
 	 * @param num identificateur du Edge
@@ -62,7 +62,7 @@ public class Edge {
 	 * Renvoi l identifiant du Edge si il en a un
 	 * @return numEdge identifiant du Edge
 	 */
-	public Object getEdge()
+	public int getEdge()
 	{
 		return this.numEdge;
 	}
@@ -87,7 +87,7 @@ public class Edge {
 	 * Modifie l identifiant du Edge
 	 * @param num nouvel identifiant du Edge
 	 */
-	public void setEdge(Object num)
+	public void setEdge(int num)
 	{
 		this.numEdge = num;
 	}

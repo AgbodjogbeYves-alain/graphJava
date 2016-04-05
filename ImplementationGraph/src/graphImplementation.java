@@ -76,7 +76,18 @@ public class graphImplementation implements Graphe {
 
 	@Override
 	public void removeVertex(int arg0) {
-		// TODO Auto-generated method stub
+		int x;
+		for (x=0;x<tabvertex.length;x++){
+			if (tabvertex[x].getInt == arg0)
+			{
+				Vertex[] tabneighbors = tabvertex[x].getNeighbours();
+				
+				tabvertex[x] = null;
+			}
+			
+			
+		}
+		
 		
 	}
 
