@@ -39,14 +39,14 @@ public interface Graph {
 	 * Suppression d un Vertex en connaissant son identificateur 
 	 * @param numVertex Object
 	 */
-	public void suppressVertex(Object numVertex);
+	public void suppressVertex(int numVertex);
 	
 	/**
 	 * Procedure de suppression d un Edge en connaissant son identificateur
 	 * @param numEdge Object
 	 * Propage la suppression de relation aux vertex
 	 */
-	public void suppressRelation(Object numEdge);
+	public void suppressRelation(int numEdge);
 	
 	/**
 	 * Procedure de suppression d un Edge en connaissant les 2 vertex lies
