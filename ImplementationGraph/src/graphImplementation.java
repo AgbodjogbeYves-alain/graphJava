@@ -64,8 +64,8 @@ public class graphImplementation implements Graphe {
 		for (x=0;x<10;x++){
 			if (tabEdge[x].getName()== arg0)
 			{
-					tabEdge[x].getVertex().getFirst().removeNeighbour(tabEdge[x].getVertex().getSecond());//(getName));
-					tabEdge[x].getVertex().getSecond().removeNeighbour(tabEdge[x].getVertex().getFirst());//(getName));
+					tabEdge[x].getVertex().getFirst().removeNeighbour(tabEdge[x].getVertex().getSecond().getInt());
+					tabEdge[x].getVertex().getSecond().removeNeighbour(tabEdge[x].getVertex().getFirst().getInt());
 					tabEdge[x] = null;
 				}
 			
@@ -74,21 +74,55 @@ public class graphImplementation implements Graphe {
 		
 	}
 
+	
+	public boolean isIn(int arg0){
+		boolean res = false;
+		int i=0;
+		while ( !res && i< this.tabvertex.length ){
+			if (this.tabvertex[i].getInt() == arg0){
+				res = true;
+			}
+			
+		}
+		return res;
+		
+	}
 	@Override
 	public void removeVertex(int arg0) {
-		int x;
-		for (x=0;x<tabvertex.length;x++){
-			if (tabvertex[x].getInt == arg0)
-			{
-				Vertex[] tabneighbors = tabvertex[x].getNeighbours();
-				
-				tabvertex[x] = null;
+		if (isIn(arg0)==true){
+			Vertex v1;
+			boolean trouve = false;
+			int i=0;
+			while ( !trouve && i< this.tabvertex.length ){
+				if (this.tabvertex[i].getInt() == arg0){
+					trouve = true;
+					v1=this.tabvertex[i];
+				}
+			}
+			Vertex v2;
+			for (int j=0; j<v1.getNeighbours().length; j++){
+				v2=v1.getNeighbours()[j];
+				for (int k=0; k<v2.getNeighbours().length; k++){
+					if (v2.getNeighbours()[k]==v1){
+						v2.getNeighbours()[k]=null;
+					}
+				}
+			}
+			int y=0;
+			CoupleVertex v3 = new CoupleVertex(null, null);
+			for (y=0; y<tabEdge.length; y++){
+				v3= tabEdge[y].getVertex();
+				if (v3.first==v1 || v3.second==v1){
+					removeEdge(tabEdge[y].getInt());
+				}
+			}
+		this.tabvertex[i]=null;
+		}
+		else {
+				System.out.println("Le sommet n'existe pas il n'y a pas de raison de le supprimer");
 			}
 			
 			
-		}
-		
-		
 	}
 
 }
