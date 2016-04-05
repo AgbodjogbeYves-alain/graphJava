@@ -1,10 +1,15 @@
-import bin.Graphe;
+
 
 public class graphImplementation implements Graphe {
 
 	Vertex[] tabvertex = new Vertex[100];
 	Edge[] tabEdge = new Edge[100];
 	
+	
+	public graphImplementation(){
+		tabvertex = null;
+		tabEdge = null;
+	}
 	@Override
 	public void addEdge(Vertex arg0, Vertex arg1) { //J'estime qu'il s'agit d'un ajout de UndirectedEdge
 		UndirectedEdge e = new UndirectedEdge(null, arg0, arg1);
@@ -64,8 +69,8 @@ public class graphImplementation implements Graphe {
 		for (x=0;x<10;x++){
 			if (tabEdge[x].getName()== arg0)
 			{
-					tabEdge[x].getVertex().getFirst().removeNeighbour(tabEdge[x].getVertex().getSecond().getInt());
-					tabEdge[x].getVertex().getSecond().removeNeighbour(tabEdge[x].getVertex().getFirst().getInt());
+					tabEdge[x].getVertex().getFirst().removeNeighbour(removeNeighbour(tabEdge[x].getVertex().getSecond().getNumVertex()));;
+					tabEdge[x].getVertex().getSecond().removeNeighbour(tabEdge[x].getVertex().getFirst().getNumVertex());
 					tabEdge[x] = null;
 				}
 			
@@ -79,7 +84,7 @@ public class graphImplementation implements Graphe {
 		boolean res = false;
 		int i=0;
 		while ( !res && i< this.tabvertex.length ){
-			if (this.tabvertex[i].getInt() == arg0){
+			if (this.tabvertex[i].getNumVertex() == arg0){
 				res = true;
 			}
 			
@@ -89,17 +94,18 @@ public class graphImplementation implements Graphe {
 	}
 	@Override
 	public void removeVertex(int arg0) {
+		Vertex v1 = null;
 		if (isIn(arg0)==true){
-			Vertex v1;
 			boolean trouve = false;
 			int i=0;
 			while ( !trouve && i< this.tabvertex.length ){
-				if (this.tabvertex[i].getInt() == arg0){
+				if (this.tabvertex[i].getNumVertex() == arg0){
 					trouve = true;
 					v1=this.tabvertex[i];
 				}
 			}
 			Vertex v2;
+			
 			for (int j=0; j<v1.getNeighbours().length; j++){
 				v2=v1.getNeighbours()[j];
 				for (int k=0; k<v2.getNeighbours().length; k++){
@@ -113,7 +119,7 @@ public class graphImplementation implements Graphe {
 			for (y=0; y<tabEdge.length; y++){
 				v3= tabEdge[y].getVertex();
 				if (v3.first==v1 || v3.second==v1){
-					removeEdge(tabEdge[y].getInt());
+					removeEdge(tabEdge[y].getName());
 				}
 			}
 		this.tabvertex[i]=null;
