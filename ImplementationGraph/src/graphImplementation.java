@@ -2,8 +2,8 @@
 
 public class graphImplementation implements Graphe {
 
-	Vertex[] tabvertex = new Vertex[100];
-	Edge[] tabEdge = new Edge[100];
+	public Vertex[] tabvertex = new Vertex[100];
+	public Edge[] tabEdge = new Edge[100];
 	
 	
 	public graphImplementation(){
@@ -129,6 +129,14 @@ public class graphImplementation implements Graphe {
 			}
 			
 			
+	}
+	
+	public Vertex[] gettabvertex(){
+		return this.tabvertex;
+	}
+	
+	public Edge[] gettabEdge(){
+		return this.tabEdge;
 	}
 
 }
