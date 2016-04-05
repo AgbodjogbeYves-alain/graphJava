@@ -11,6 +11,7 @@ public class TestImpl {
 		Scanner sc = new Scanner(System.in);
 		int x = sc.nextInt();
 		tabvertex[j] = new Vertex(x,null);
+		j++;
 		}
 		int k = 0;
 		while (k!= 6){
