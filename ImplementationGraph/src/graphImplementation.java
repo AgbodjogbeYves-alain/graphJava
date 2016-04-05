@@ -20,7 +20,7 @@ public class graphImplementation implements Graphe {
 	}
 	@Override
 	public void addEdge(Vertex arg0, Vertex arg1) { //J'estime qu'il s'agit d'un ajout de UndirectedEdge
-		UndirectedEdge e = new UndirectedEdge(null, arg0, arg1);
+		UndirectedEdge e = new UndirectedEdge("moi", arg0, arg1);
 		int i = 0;
 		boolean insere = false;
 		while(i<tabvertex.length && insere==false){
