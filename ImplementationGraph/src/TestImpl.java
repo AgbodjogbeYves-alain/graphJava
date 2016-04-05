@@ -16,9 +16,10 @@ public class TestImpl {
 		while (k!= 6){
 		g.addVertex(tabvertex[j]);
 		}
-		System.out.println("Voulez vous connaitre les voisins d'un sommet?");
+		System.out.println("Voulez vous connaitre les voisins d'un sommet? tapez yes");
 		Scanner sc4 = new Scanner(System.in);
 		String rep = sc4.nextLine();
+		
 		while(rep=="yes"){
 		System.out.println("Entrez 1 numero de vertex deja present dans le graphe pour avoir ses voisins");
 		Scanner sc3 = new Scanner(System.in);
@@ -35,6 +36,9 @@ public class TestImpl {
 				System.out.println(v1[i].getNumVertex());
 				i++;
 			}
+		System.out.println("Voulez vous connaitre les voisins d'un sommet? tapez yes");
+		sc4 = new Scanner(System.in);
+		rep = sc4.nextLine();
 		}
 	}
 	
