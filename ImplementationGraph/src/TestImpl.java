@@ -4,28 +4,57 @@ public class TestImpl {
 	public static void main(String[] args) {
 		graphImplementation g = new graphImplementation();
 		int j = 0;
-		Vertex[] tabvertex1 = new Vertex[100];
+		System.out.println("Combien de vertex voulez vous ajouter au graphe?");
+		Scanner sc7 = new Scanner(System.in);
+		int s = sc7.nextInt();
+		Vertex[] tabvertex1 = new Vertex[s];
 		Vertex[] v1 = null;
-		while (j< 6){
-		System.out.println("Entrez un identifiant(int) pour le vertex "+ j);
-		Scanner sc = new Scanner(System.in);
-		int x = sc.nextInt();
-		tabvertex1[j] = new Vertex(x,null);
-		j++;
+		while (j< s){
+			System.out.println("Entrez un identifiant(int) pour le vertex "+ j);
+			Scanner sc = new Scanner(System.in);
+			int x = sc.nextInt();
+			tabvertex1[j] = new Vertex(x,null);
+			j++;
 		}
 		int k = 0;
-		while (k<6){
-			System.out.println("Fait k = "+k+" 1");
+		while (k<s){
 			g.addVertex(tabvertex1[k]);
 			k++;
-			System.out.println("Fait k = "+k+" 2");
 		}
+		
+		//Lier 2 vertex
+		System.out.println("Voulez vous liez 2 vertex? entrez 1");
+		Scanner sc6 = new Scanner(System.in);
+		int a = sc6.nextInt();
+		while(a == 1){
+			System.out.println("Donnez l'identifiant du premier vertex a relier");
+			Scanner sc5 = new Scanner(System.in);
+			int p = sc5.nextInt();
+			System.out.println("Donnez l'identifiant du second vertex a relier");
+			sc5 = new Scanner(System.in);
+			int o = sc5.nextInt();
+			int m=0;
+			boolean trouve = false;
+			while(m<g.gettabvertex().length && !trouve){
+				m++;
+			}
+			int n=0;
+			boolean trouve2 = false;
+			while(n<g.gettabvertex().length && !trouve2){
+				n++;
+			}
+			g.addEdge(g.gettabvertex()[m],g.gettabvertex()[n]);
+			System.out.println("Voulez vous liez 2 autres vertex? entrez 1");
+			sc6 = new Scanner(System.in);
+			a = sc6.nextInt();
+		}
+		
+		//Trouver les voisins d'un vertex
 		System.out.println("Voulez vous connaitre les voisins d'un sommet? tapez 1");
 		Scanner sc4 = new Scanner(System.in);
 		int rep = sc4.nextInt();
-		
 		while(rep==1){
-			System.out.println("Entrez 1 numero de vertex deja present dans le graphe pour avoir ses voisins");
+			System.out.println("Entrez le numero de vertex deja present dans le graphe pour avoir ses voisins");
 			Scanner sc3 = new Scanner(System.in);
 			int z = sc3.nextInt();
 			int c = 0;
