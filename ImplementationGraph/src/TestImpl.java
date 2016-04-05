@@ -19,12 +19,25 @@ public class TestImpl {
 		int z = sc3.nextInt();
 		if (z == 1){
 			v1.getNeighbours();
+			System.out.println("Les vertex auquel v1 est lié ont les identifiants suivants/n " );
+			int i=0;
+			while(i<v1.getNeighbours().length){
+				System.out.println(v1.getNeighbours()[i].getNumVertex());
+				i++;
+			}
 		}
 		else 
 		{
 			v2.getNeighbours();
-		}
+			System.out.println("Les vertex auquel v2 est lié ont les identifiants suivants/n " );
+			int i=0;
+			while(i<v2.getNeighbours().length){
+				System.out.println(v2.getNeighbours()[i].getNumVertex());
+				i++;
+			
+			}
 		}
 		
 	}
+}
 
