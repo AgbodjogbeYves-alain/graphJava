@@ -69,7 +69,7 @@ public class graphImplementation implements Graphe {
 		for (x=0;x<10;x++){
 			if (tabEdge[x].getName()== arg0)
 			{
-					tabEdge[x].getVertex().getFirst().removeNeighbour(removeNeighbour(tabEdge[x].getVertex().getSecond().getNumVertex()));;
+					tabEdge[x].getVertex().getFirst().removeNeighbour(tabEdge[x].getVertex().getSecond().getNumVertex());;
 					tabEdge[x].getVertex().getSecond().removeNeighbour(tabEdge[x].getVertex().getFirst().getNumVertex());
 					tabEdge[x] = null;
 				}
