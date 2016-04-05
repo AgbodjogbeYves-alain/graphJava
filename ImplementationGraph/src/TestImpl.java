@@ -36,11 +36,17 @@ public class TestImpl {
 			int m=0;
 			boolean trouve = false;
 			while(m<g.gettabvertex().length && !trouve){
+				if (g.gettabvertex()[m].getNumVertex() == p) {
+					trouve=true;
+				}
 				m++;
 			}
 			int n=0;
 			boolean trouve2 = false;
 			while(n<g.gettabvertex().length && !trouve2){
+				if (g.gettabvertex()[n].getNumVertex() == o) {
+					trouve2=true;
+				}
 				n++;
 			}
 			g.addEdge(g.gettabvertex()[m],g.gettabvertex()[n]);
