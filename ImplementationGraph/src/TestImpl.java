@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class TestImpl {
 	public static void main(String[] args) {
-		/*graphImplementation g = new graphImplementation();
+		graphImplementation g = new graphImplementation();
 		int j = 0;
 		System.out.println("Combien de vertex voulez vous ajouter au graphe?");
 		Scanner sc7 = new Scanner(System.in);
@@ -79,11 +79,14 @@ public class TestImpl {
 		System.out.println("Voulez vous connaitre les voisins d'un sommet? tapez yes");
 		sc4 = new Scanner(System.in);
 		rep = sc4.nextInt();
-		}*/
-		graphImplementation g = new graphImplementation();
+		}
+		/*graphImplementation g = new graphImplementation();
 		Vertex v1 = new Vertex(1,null);
 		Vertex v2 = new Vertex(2,null);
-		g.addEdge(v1, v2);
+		g.addVertex(v1);
+		g.addVertex(v2);
+		g.addEdge(v1, v2);*/
+		
 		
 		
 	}
