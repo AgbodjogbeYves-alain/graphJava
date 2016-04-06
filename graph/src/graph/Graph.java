@@ -85,5 +85,11 @@ public interface Graph {
 	 */
 	public Edge foundEdge(Vertex x, Vertex v);
 	
+	/**
+	 * Recuperer les voisin d'un vertex 
+	 * @param x Vertex
+	 * @return Vertex[]
+	 */
+	public Vertex[] getNeighbors(Vertex x);
 
 }

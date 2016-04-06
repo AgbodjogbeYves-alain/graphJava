@@ -20,7 +20,7 @@ public class graphImplementation implements Graphe {
 	}
 	@Override
 	public void addEdge(Vertex arg0, Vertex arg1) { //J'estime qu'il s'agit d'un ajout de UndirectedEdge
-		UndirectedEdge e = new UndirectedEdge(null, arg0, arg1);
+		UndirectedEdge e = new UndirectedEdge((Integer) null, arg0, arg1);
 		int i = 0;
 		boolean insere = false;
 		while(i<tabvertex.length && insere==false){
@@ -71,9 +71,8 @@ public class graphImplementation implements Graphe {
 	}
 
 	@Override
-	public void removeEdge(String arg0) {
+	public void removeEdge(int arg0) {
 		int x;
-		int y;
 		for (x=0;x<10;x++){
 			if (tabEdge[x].getName()== arg0)
 			{
