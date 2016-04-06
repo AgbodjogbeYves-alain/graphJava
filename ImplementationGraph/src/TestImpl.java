@@ -83,7 +83,7 @@ public class TestImpl {
 		graphImplementation g = new graphImplementation();
 		Vertex v1 = new Vertex(1,null);
 		Vertex v2 = new Vertex(2,null);
-		UndirectedEdge e = new UndirectedEdge();
+		g.addEdge(v1, v2);
 		
 		
 	}

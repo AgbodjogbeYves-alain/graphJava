@@ -26,6 +26,7 @@ public class graphImplementation implements Graphe {
 		while(i<tabvertex.length && insere==false){
 				if (this.tabEdge[i] == null){
 					this.tabEdge[i]= e;
+					e.setName(i);
 					insere = true;
 				
 			}
