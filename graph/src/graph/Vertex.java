@@ -84,6 +84,14 @@ public class Vertex {
 		this.relatedEdge.add(e);
 		e.relierSommet(this,v);
 	}
+	
+	/**
+	 * Permet de recuperer les voisins d'un sommet
+	 * @return
+	 */
+	public ArrayList<Vertex> getNeighbors(){
+		return this.relatedVertex;
+	}
 		
 	/**
 	 * Trouver un Edge relie a ce vertex
